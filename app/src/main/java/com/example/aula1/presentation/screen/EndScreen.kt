@@ -18,6 +18,8 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -38,6 +40,10 @@ import com.example.aula1.presentation.screen.viewmodel.GameViewModel
 fun EndScreen(gameViewModel: GameViewModel, navController: NavHostController) {
     val pressStart2p = FontFamily(
         Font(R.font.pressstart2pregular, FontWeight.Normal))
+
+    val game by gameViewModel.game.collectAsState()
+
+    gameViewModel.highScore(navController.context, game.highScore)
 
 Box (
     modifier = Modifier

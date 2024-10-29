@@ -42,6 +42,8 @@ val pressStart2p = FontFamily(
 @Composable
 fun StartScreen(navController: NavHostController, gameViewModel: GameViewModel) {
 
+    gameViewModel.getHighScore(navController.context)
+
 
     Box(
         modifier = Modifier
@@ -57,9 +59,6 @@ fun StartScreen(navController: NavHostController, gameViewModel: GameViewModel) 
                 .background(Color(0xFFE0FFDD))
                 .padding(horizontal = 20.dp)
                 .align(Alignment.TopStart),
-
-
-
         ) {
             Row (
                 modifier = Modifier
@@ -70,10 +69,13 @@ fun StartScreen(navController: NavHostController, gameViewModel: GameViewModel) 
 
             ){
                 Text(text = "TranslateIt", fontSize = 18.sp, color = Color(0xFF053406), fontFamily = pressStart2p)
+
             }
 
 
             Spacer(modifier = Modifier.height(60.dp))
+
+
 
             Row(
                 modifier = Modifier

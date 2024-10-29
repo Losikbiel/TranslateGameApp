@@ -5,4 +5,5 @@ data class GameUIState(
     val currentScrambledWord: String = "",
     val score: Int = 0,
     val option: List<String> = listOf(),
+    val highScore: Int = 0,
 )

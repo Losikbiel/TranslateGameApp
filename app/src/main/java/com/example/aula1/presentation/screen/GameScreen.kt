@@ -42,7 +42,7 @@ fun GameScreen(gameViewModel: GameViewModel, navController: NavHostController) {
         Font(R.font.pressstart2pregular, FontWeight.Normal)
     )
     val game by gameViewModel.game.collectAsState()
-    val list = listOf("Foco", "Feliz", "Fomentar","Folha")
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -59,6 +59,9 @@ fun GameScreen(gameViewModel: GameViewModel, navController: NavHostController) {
 
             Text(text = "TranslateIt", fontSize = 24.sp, color = Color(0xFFE0FFDD), fontFamily = pressStart2p)
         }
+        Spacer(modifier = Modifier.height(20.dp))
+
+        Text(text = "HighScore: ${game.highScore}", fontSize = 20.sp, color = Color(0xFF2A7A23), fontFamily = pressStart2p, modifier = Modifier.align(Alignment.CenterHorizontally))
 
         Spacer(modifier = Modifier.height(35.dp))
 
@@ -148,7 +151,6 @@ Column (
             ){
 
                 Text(text = item, fontSize = 15.sp, color = Color(0xFFE0FFDD), fontFamily = pressStart2p)
-
                                 }
                             }
                         }

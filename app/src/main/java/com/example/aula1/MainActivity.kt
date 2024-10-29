@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.aula1.presentation.navigation.AppNavGraph
 import com.example.aula1.presentation.screen.EndScreen
 import com.example.aula1.presentation.screen.GameScreen
+import com.example.aula1.presentation.screen.LanguageSelectScreen
 import com.example.aula1.presentation.screen.StartScreen
 import com.example.aula1.ui.theme.Aula1Theme
 
